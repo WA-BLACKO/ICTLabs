@@ -10570,3 +10570,94 @@ body{
     }
 
 } 
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.infinity-logo {
+    width: 230px;
+    max-width: 90%;
+    overflow: visible;
+}
+
+/* faded full infinity symbol */
+
+.infinity-bg {
+    fill: none;
+
+    stroke: rgba(90, 110, 255, 0.15);
+
+    stroke-width: 18;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* moving part */
+
+.infinity-run {
+    fill: none;
+
+    stroke: url(#ictGradient);
+
+    stroke-width: 18;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-dasharray: 110 650;
+
+    animation: infinityFlow 3s linear infinite;
+
+    filter:
+        drop-shadow(0 0 5px #4361ee)
+        drop-shadow(0 0 12px rgba(155, 92, 255, 0.6));
+}
+
+@keyframes infinityFlow {
+
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -760;
+    }
+
+}
+
+.ict-text {
+    margin-top: -35px;
+    text-align: center;
+}
+
+.ict-text span {
+    font-size: 34px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #00a8ff,
+        #4263eb,
+        #9b5cff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.ict-text p {
+    margin-top: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    opacity: .7;
+}
