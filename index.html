@@ -59,19 +59,100 @@
 
 <body>
 
-<!-- LOADING SCREEN -->
-<div id="loader">
-    <div class="infinity-loader">
-        <svg viewBox="0 0 200 100">
-            <path
-                class="infinity-path"
-                d="M50,50 C50,20 85,20 100,50 C115,80 150,80 150,50 C150,20 115,20 100,50 C85,80 50,80 50,50"
-            />
-        </svg>
-    </div>
+<!-- INFINITY LOADING SCREEN -->
+<div id="pageLoader">
+    <svg class="infinity-svg" viewBox="0 0 200 100">
+        <path
+            class="infinity-line"
+            pathLength="100"
+            d="M50 50
+               C50 20, 85 20, 100 50
+               C115 80, 150 80, 150 50
+               C150 20, 115 20, 100 50
+               C85 80, 50 80, 50 50"
+        />
+    </svg>
 </div>
 
-<!-- Your normal website starts below -->
+<style>
+#pageLoader {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #070b14;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.infinity-svg {
+    width: 170px;
+    height: 100px;
+}
+
+.infinity-line {
+    fill: none;
+    stroke: #00eaff;
+    stroke-width: 6;
+    stroke-linecap: round;
+
+    path-length: 100;
+
+    stroke-dasharray: 22 78;
+    stroke-dashoffset: 100;
+
+    filter:
+        drop-shadow(0 0 5px #00eaff)
+        drop-shadow(0 0 12px #00eaff);
+
+    animation: infinityMove 1.5s linear infinite;
+}
+
+@keyframes infinityMove {
+    from {
+        stroke-dashoffset: 100;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#pageLoader.loader-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+</style>
+
+<script>
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("pageLoader");
+
+    setTimeout(function () {
+
+        loader.classList.add("loader-hide");
+
+        setTimeout(function () {
+            loader.remove();
+        }, 500);
+
+    }, 2000);
+
+});
+</script>
 
   <div class="app-shell">
     <aside class="sidebar" id="sidebar" >
