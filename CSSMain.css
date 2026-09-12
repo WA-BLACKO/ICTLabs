@@ -13,7 +13,7 @@ button{cursor:pointer}
 .sidebar{width:278px;position:fixed;left:0;top:0;bottom:0;padding:22px 15px;border-right:1px solid var(--line);background:rgba(5,12,17,.72);backdrop-filter:blur(24px);z-index:20;overflow:auto}
 .light .sidebar{background:rgba(246,252,252,.82)}
 .brand{display:flex;align-items:center;gap:12px;padding:5px 10px 25px}
-.brand-mark{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#3bb6e8);color:#041014;font-weight:900;font-size:22px;box-shadow:0 8px 30px rgba(98,230,193,.2)}
+.brand-mark{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;color:#041014;font-weight:900;font-size:22px;}
 .brand strong{display:block;font-family:"Space Grotesk";font-size:17px}.brand span{font-size:11px;color:var(--muted)}
 .nav{display:flex;flex-direction:column;gap:4px}.nav-label{font-size:10px;font-weight:800;color:#FFCFEA;letter-spacing:1.4px;padding:17px 11px 6px}
 .nav-item{border:0;background:transparent;color:var(--muted);display:flex;align-items:center;gap:12px;text-align:left;padding:10px 11px;border-radius:11px;transition:.2s;font-size:13px}
@@ -9307,18 +9307,12 @@ body{
     display:none !important;
 }
 
-/* =========================================================
-   MOBILE APP / ALIEXPRESS STYLE LAYOUT
-   ========================================================= */
 
 .mobile-menu-overlay {
     display: none;
 }
 
 
-/* =========================================================
-   TABLET + MOBILE
-   ========================================================= */
 
 @media (max-width: 900px) {
 
@@ -9329,9 +9323,6 @@ body{
     }
 
 
-    /* ===============================
-       MAIN PAGE
-       =============================== */
 
     .app-shell {
         display: block;
@@ -9345,9 +9336,6 @@ body{
     }
 
 
-    /* ===============================
-       SIDEBAR DRAWER
-       =============================== */
 
     .sidebar {
         position: fixed !important;
@@ -9375,16 +9363,11 @@ body{
     }
 
 
-    /* menu opened */
 
     .sidebar.open {
         transform: translateX(0);
     }
 
-
-    /* ===============================
-       DARK OVERLAY
-       =============================== */
 
     .mobile-menu-overlay {
         display: block;
@@ -9419,9 +9402,6 @@ body{
     }
 
 
-    /* ===============================
-       MOBILE CLOSE BUTTON
-       =============================== */
 
     .mobile-close {
         display: flex !important;
@@ -9446,10 +9426,6 @@ body{
         z-index: 20;
     }
 
-
-    /* ===============================
-       TOP BAR
-       =============================== */
 
     .topbar {
         position: sticky;
@@ -9480,9 +9456,6 @@ body{
     }
 
 
-    /* ===============================
-       HAMBURGER
-       =============================== */
 
     .menu-btn {
         display: flex !important;
@@ -9503,9 +9476,6 @@ body{
     }
 
 
-    /* ===============================
-       PAGE TITLE
-       =============================== */
 
     .crumb {
         flex: 1;
@@ -9539,9 +9509,6 @@ body{
     }
 
 
-    /* ===============================
-       TOP RIGHT CONTROLS
-       =============================== */
 
     .top-actions {
         display: flex;
@@ -9564,9 +9531,6 @@ body{
     }
 
 
-    /* ===============================
-       MAIN CONTENT
-       =============================== */
 
     .content {
         width: 100%;
@@ -9584,9 +9548,6 @@ body{
     }
 
 
-    /* ===============================
-       MOBILE CARDS
-       =============================== */
 
     .home-feature-grid,
     .grid,
@@ -9606,9 +9567,6 @@ body{
     }
 
 
-    /* ===============================
-       HERO
-       =============================== */
 
     .hero {
         width: 100%;
@@ -9640,9 +9598,6 @@ body{
     }
 
 
-    /* ===============================
-       FORMS
-       =============================== */
 
     input,
     textarea,
@@ -9658,9 +9613,6 @@ body{
     }
 
 
-    /* ===============================
-       TOUCH BUTTONS
-       =============================== */
 
     button,
     .btn,
@@ -9671,9 +9623,6 @@ body{
     }
 
 
-    /* ===============================
-       SIDEBAR NAV
-       =============================== */
 
     .nav-item {
         width: 100%;
@@ -9697,9 +9646,6 @@ body{
 }
 
 
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
 
 @media (max-width: 520px) {
 
@@ -9744,24 +9690,15 @@ body{
     }
 
 
-    /* cleaner mobile top bar */
-
     .language-box {
         display: none;
     }
 
 }
 
-/* =========================================================
-   ICT LAB — PREMIUM MOBILE VISUAL UPGRADE
-   Put AFTER the working mobile drawer CSS
-   ========================================================= */
 
 @media (max-width: 900px) {
 
-    /* -----------------------------------------
-       GENERAL MOBILE TYPOGRAPHY
-       ----------------------------------------- */
 
     body {
         font-size: 15px;
@@ -9778,9 +9715,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       TOP BAR
-       ----------------------------------------- */
 
     .topbar {
         min-height: 64px;
@@ -9861,9 +9795,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       HERO
-       ----------------------------------------- */
 
     .hero {
         padding:
@@ -9936,9 +9867,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       SECTION TITLES
-       ----------------------------------------- */
 
     .section-head {
         align-items:
@@ -10141,9 +10069,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       HOME FEATURE CARDS
-       ----------------------------------------- */
 
     .home-feature-grid {
         gap:
@@ -10249,9 +10174,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       BUTTONS
-       ----------------------------------------- */
 
     .btn {
         min-height:
@@ -10276,9 +10198,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       INPUTS
-       ----------------------------------------- */
 
     input,
     select,
@@ -10313,9 +10232,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       RESULT BOXES
-       ----------------------------------------- */
 
     .result {
         padding:
@@ -10331,10 +10247,6 @@ body{
             1.7 !important;
     }
 
-
-    /* -----------------------------------------
-       QUIZ
-       ----------------------------------------- */
 
     .quiz-home {
         padding:
@@ -10391,9 +10303,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       NAVIGATION DRAWER
-       ----------------------------------------- */
 
     .sidebar {
         padding:
@@ -10474,9 +10383,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       FOOTER
-       ----------------------------------------- */
 
     .ict-footer {
         font-size:
@@ -10485,10 +10391,6 @@ body{
 
 }
 
-
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
 
 @media (max-width: 520px) {
 
@@ -10585,7 +10487,6 @@ body{
     overflow: visible;
 }
 
-/* faded full infinity symbol */
 
 .infinity-bg {
     fill: none;
@@ -10661,9 +10562,7 @@ body{
 
     opacity: .7;
 }
-/* =========================================
-   ANIMATED ICT LAB INFINITY LOGO
-   ========================================= */
+
 
 .infinity-brand-logo {
     width: 50px;
@@ -10678,13 +10577,10 @@ body{
     display: grid;
     place-items: center;
 
-    overflow: hidden;
 
     
 
-    box-shadow:
-        0 8px 22px rgba(44,175,255,.20),
-        inset 0 1px 0 rgba(255,255,255,.50);
+   
 }
 
 
@@ -10708,7 +10604,6 @@ body{
 }
 
 
-/* faint infinity underneath */
 
 .brand-infinity-track {
     stroke:
@@ -10716,7 +10611,6 @@ body{
 }
 
 
-/* moving glowing line */
 
 .brand-infinity-line {
     stroke:
@@ -10765,7 +10659,6 @@ body{
 }
 
 
-/* slight glow pulse */
 
 .infinity-brand-logo::after {
     content: "";
