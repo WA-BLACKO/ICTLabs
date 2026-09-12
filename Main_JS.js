@@ -1182,9 +1182,7 @@ function expression() {
 
 
 
-  /* ====================================================
-     CANONICAL POS
-  ==================================================== */
+
 
   function buildCanonicalPOS(
     maxterms,
@@ -3977,9 +3975,7 @@ function scheduling() {
 
 
 
-  /* =====================================================
-     ROUND ROBIN
-  ===================================================== */
+
 
   function simulateRoundRobin(
     processes,
@@ -4118,9 +4114,6 @@ function scheduling() {
 
 
 
-  /* =====================================================
-     PROCESS CARDS
-  ===================================================== */
 
   function renderProcessCards(
     results
@@ -16647,7 +16640,35 @@ const renderers={integration,"number-system":numberSystem,binary,characters,expr
 function loadTool(t){sidebar.classList.remove("open");if(t==="home")return home();if(renderers[t])renderers[t]();document.querySelectorAll(".nav-item").forEach(x=>x.classList.toggle("active",x.dataset.tool===t));window.scrollTo({top:0,behavior:"smooth"})}
 ensureStudyToolsStyles();
 ensureStudyToolNav();
-document.querySelectorAll(".nav-item").forEach(b=>b.onclick=()=>loadTool(b.dataset.tool));
+document.querySelectorAll(".nav-item")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            if (
+                button.dataset.tool
+            ) {
+                loadTool(
+                    button.dataset.tool
+                );
+            }
+
+
+            if (
+                window.innerWidth <=
+                900
+            ) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+});
 $("#openMenu").onclick=()=>sidebar.classList.add("open");$("#closeMenu").onclick=()=>sidebar.classList.remove("open");
 $("#themeBtn").onclick=()=>document.body.classList.toggle("light");
 document.addEventListener("click",e=>{let b=e.target.closest("[data-tool]");if(b&&!b.classList.contains("nav-item"))loadTool(b.dataset.tool)});
