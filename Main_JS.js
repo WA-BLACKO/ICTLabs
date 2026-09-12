@@ -19061,3 +19061,15 @@ if(ictContent){
     );
 
 } 
+
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+    }, 1500);
+}); 
