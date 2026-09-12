@@ -9369,6 +9369,7 @@ body{
     }
 
 
+
     .mobile-menu-overlay {
         display: block;
 
@@ -9425,6 +9426,7 @@ body{
 
         z-index: 20;
     }
+
 
 
     .topbar {
@@ -9690,6 +9692,8 @@ body{
     }
 
 
+    /* cleaner mobile top bar */
+
     .language-box {
         display: none;
     }
@@ -9901,9 +9905,6 @@ body{
     }
 
 
-    /* -----------------------------------------
-       STANDARD TOOL CARDS
-       ----------------------------------------- */
 
     .grid {
         gap:
@@ -10174,6 +10175,7 @@ body{
     }
 
 
+       
 
     .btn {
         min-height:
@@ -10246,6 +10248,7 @@ body{
         line-height:
             1.7 !important;
     }
+
 
 
     .quiz-home {
@@ -10392,6 +10395,7 @@ body{
 }
 
 
+
 @media (max-width: 520px) {
 
     .content {
@@ -10499,7 +10503,6 @@ body{
     stroke-linejoin: round;
 }
 
-/* moving part */
 
 .infinity-run {
     fill: none;
@@ -10563,7 +10566,6 @@ body{
     opacity: .7;
 }
 
-
 .infinity-brand-logo {
     width: 50px;
     height: 50px;
@@ -10578,9 +10580,6 @@ body{
     place-items: center;
 
 
-    
-
-   
 }
 
 
@@ -10604,6 +10603,7 @@ body{
 }
 
 
+/* faint infinity underneath */
 
 .brand-infinity-track {
     stroke:
@@ -10611,6 +10611,7 @@ body{
 }
 
 
+/* moving glowing line */
 
 .brand-infinity-line {
     stroke:
@@ -10659,6 +10660,7 @@ body{
 }
 
 
+/* slight glow pulse */
 
 .infinity-brand-logo::after {
     content: "";
