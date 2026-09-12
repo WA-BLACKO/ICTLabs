@@ -1,0 +1,14 @@
+**Files Chart
+   |-Main.html
+   |-CSSMain.css
+   |-Main_JS.js
+   ---------------
+   |-recordings.html
+   |-recordings.css
+   |-recordings.js  //PreviousJS.js is the script before recording.js
+   |-Backend.php
+   -------------------------------------------------------------------
+   |style.css // Backup script 
+   
+
+########### Try not to Copy ##########

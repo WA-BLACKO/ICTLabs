@@ -1,0 +1,480 @@
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICT Lab — Interactive Learning Lab</title>
+  
+
+
+<link
+  rel="manifest"
+  href="manifest.json"
+>
+
+<meta
+  name="theme-color"
+  content="#10242b"
+>
+
+<meta
+  name="application-name"
+  content="ICT Lab"
+>
+
+<meta
+  name="mobile-web-app-capable"
+  content="yes"
+>
+
+<meta
+  name="apple-mobile-web-app-capable"
+  content="yes"
+>
+
+<meta
+  name="apple-mobile-web-app-status-bar-style"
+  content="black-translucent"
+>
+
+<meta
+  name="apple-mobile-web-app-title"
+  content="ICT Lab"
+>
+
+<link
+  rel="apple-touch-icon"
+  href="icons/icon-192.png"
+> 
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSSMain.css">
+</head>
+<body>
+<div class="floating-particles" id="floatingParticles"></div>
+
+<div id="loader">
+    <div class="loader-content">
+        <div class="spinner"></div>
+        <h2>♾️ ICT Lab</h2>
+        <p>Loading...</p>
+    </div>
+</div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" >
+      <div class="brand">
+        <div class="brand-mark">♾️</div>
+        <div><strong>ICT Lab</strong><span>Learning platform</span></div>
+      </div>
+      <button class="mobile-close" id="closeMenu">×</button>
+
+      <nav class="nav">
+        <button class="nav-item active" data-tool="home">⌂ <span>Dashboard</span></button>
+        <div class="nav-label">CALCULATORS</div>
+        <button class="nav-item" data-tool="integration">∫ <span>Integration</span></button>
+        <button class="nav-item" data-tool="number-system">01 <span>Number System</span></button>
+        <button class="nav-item" data-tool="binary">▣ <span>Binary Calculator</span></button>
+        <button class="nav-item" data-tool="characters">Aa <span>Character Representation</span></button>
+        <button class="nav-item" data-tool="expression">ƒ <span>Expression Table</span></button>
+        <button class="nav-item" data-tool="kmap">▦ <span>Karnaugh Map</span></button>
+        <button class="nav-item" data-tool="logic-builder">
+    ◉ <span>Logic Gate Builder</span>
+</button>
+<button class="nav-item" data-tool="storage-calc">
+    MB <span>Storage & Transmission</span>
+</button>
+
+<button class="nav-item" data-tool="flowchart">
+    ⇢ <span>Flowchart Simulator</span>
+</button>
+
+        <div class="nav-label">COMPUTER SYSTEMS</div>
+        <button class="nav-item" data-tool="cpu">◈ <span>CPU Simulator</span></button>
+        <button class="nav-item" data-tool="fetch">↻ <span>Fetch–Execute Cycle</span></button>
+        <button class="nav-item" data-tool="scheduling">◫ <span>CPU Scheduling</span></button>
+        <button class="nav-item" data-tool="er">◇ <span>ER Diagram Builder</span></button>
+        <button class="nav-item" data-tool="normalizer">⊞ <span>DB Normalizer</span></button>
+        <button class="nav-item" data-tool="sql-lab">
+    SQL <span>SQL Practice Lab</span>
+</button>
+
+        <div class="nav-label">NETWORKING</div>
+        <button class="nav-item" data-tool="subnet">⌁ <span>Subnet Calculator</span></button>
+        <button class="nav-item" data-tool="ipmac"># <span>IP / MAC Analyzer</span></button>
+        <button class="nav-item" data-tool="network">⌘ <span>Network Playground</span></button>
+
+        <div class="nav-label">CODING & MEDIA</div>
+        <button class="nav-item" data-tool="python">Py <span>Python IDLE</span></button>
+        <button class="nav-item" data-tool="web-editor">&lt;/&gt; <span>HTML + CSS Editor</span></button>
+        <button class="nav-item" data-tool="qr">QR <span>QR Formatter</span></button>
+
+        <div class="nav-label">PRACTICE</div>
+        <button class="nav-item" data-tool="quiz">✓ <span>MCQ Quiz Engine</span></button>
+        <button class="nav-item" data-tool="games">◉ <span>Mini Games Hub</span></button>
+        <button class="nav-item" data-tool="resources">⇄ <span>Resources Exchange</span></button>
+        <button class="nav-item" data-tool="ict-tools">✦ <span>ICT Tool Block</span></button>
+      
+       <div class="nav-label">RESOURCES n' MORE</div>
+        <a href="recordings.html"><button class="nav-item">📹 <span>Unitwise Recordings</span></button></a>
+       <button class="nav-item" data-tool="short-notes-papers">
+    📝 <span>Short Notes & Papers</span>
+</button>
+      <a href="tt.html"><button class="nav-item">⌚ <span>Time Sheduler</span></button></a>
+      
+     
+        <div class="developer-card">
+        <div class="developer-title">DEVELOPER</div>
+
+        <div class="developer-name">
+          Nadula Sasmitha Bandara
+        </div>
+
+        <a href="mailto:nadulasasmitha1212@gmail.com" class="developer-contact">
+          ✉ nadulasasmitha1212@gmail.com
+        </a>
+
+        <a href="tel:+94729001370" class="developer-contact">
+          ☎ +94 72 900 1370
+        </a>
+      </div>
+      
+</aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="openMenu">☰</button>
+        <div class="crumb"><span>ICT Lab</span><b>/</b><strong id="pageTitle">Dashboard</strong></div>
+        <div class="top-actions">
+
+  
+<button
+  class="install-app-btn"
+  id="installAppBtn"
+  title="Install ICT Lab"
+  hidden
+>
+
+  <span class="install-app-icon">
+    ↓
+  </span>
+
+  <span>
+    Install App
+  </span>
+
+</button>
+  <button
+    class="icon-btn"
+    id="themeBtn"
+    title="Toggle theme"
+    aria-label="Toggle theme"
+  >
+    ☼
+  </button>
+
+  <div class="avatar">NS</div>
+
+</div>
+      </header>
+
+      <section class="content" id="content"></section>
+      <footer class="ict-footer">
+
+    <div class="footer-glow"></div>
+
+    <div class="footer-main">
+
+        <div class="footer-section footer-about">
+
+            <div class="footer-brand">
+                <div class="footer-brand-icon">ICT</div>
+
+                <h2>ICT Lab</h2>
+            </div>
+
+            <p>
+                An interactive learning environment built for
+                ICT students to practise, experiment and understand
+                important concepts through useful educational tools.
+            </p>
+
+            <div class="footer-tags">
+                <span>A/L ICT</span>
+                <span>Interactive Learning</span>
+                <span>Practice Tools</span>
+            </div>
+
+        </div>
+
+
+        
+        <div class="footer-section">
+
+            <h3>Quick Access</h3>
+
+            <button data-tool="home">
+                Home
+            </button>
+
+            <button data-tool="expression">
+                Boolean Logic
+            </button>
+
+            <button data-tool="logic-builder">
+                Logic Gate Builder
+            </button>
+
+            <button data-tool="sql-lab">
+                SQL Practice Lab
+            </button>
+
+            <button data-tool="quiz">
+                MCQ Quiz
+            </button>
+
+            <button data-tool="games">
+                Mini Games
+            </button>
+
+        </div>
+
+
+        <div class="footer-section">
+
+            <h3>Creator & Developer</h3>
+
+            <p>
+                Designed and developed by
+                <strong>Nadula Sasmitha Bandara</strong>
+                as an educational ICT project.
+            </p>
+
+            <div class="footer-contact">
+
+                <a href="mailto:nadulasasmitha1212@gmail.com">
+                    ✉ Email Developer
+                </a>
+
+                <a href="tel:+94729001370">
+                    ☎ Contact Developer
+                </a>
+
+            </div>
+
+            <button
+                class="footer-report"
+                id="reportProblem"
+                type="button"
+            >
+                ⚑ Report a Problem
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © <span id="footerYear"></span>
+            ICT Lab
+        </span>
+
+        <span>
+            Built for ICT Learning
+        </span>
+
+        <span class="footer-online">
+            <i></i>
+            ICT Lab Online
+        </span>
+
+    </div>
+
+</footer> 
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<div class="ict-ai-wrapper">
+
+    <button
+        id="ictAiButton"
+        class="ict-ai-button"
+        aria-label="Open ICT AI Assistant"
+    >
+
+        <div class="robot">
+
+            <div class="robot-antenna">
+                <span></span>
+            </div>
+
+            <div class="robot-head">
+
+                <div class="robot-eye left"></div>
+                <div class="robot-eye right"></div>
+
+                <div class="robot-mouth"></div>
+
+            </div>
+
+            <div class="robot-body">
+                AI
+            </div>
+
+            <div class="robot-hand">
+                👋
+            </div>
+
+        </div>
+
+        <span class="ai-online-dot"></span>
+
+    </button>
+
+
+
+    <div
+        id="ictAiChat"
+        class="ict-ai-chat"
+    >
+
+        <div class="ai-chat-header">
+
+            <div class="ai-header-robot">
+
+                <div class="mini-robot-face">
+                    <span>•</span>
+                    <span>‿</span>
+                    <span>•</span>
+                </div>
+
+            </div>
+
+            <div class="ai-header-info">
+
+                <strong>
+                    ICT Lab AI
+                </strong>
+
+                <span>
+                    <i></i>
+                    Online • ICT Assistant
+                </span>
+
+            </div>
+
+
+            <button
+                id="closeAiChat"
+                class="ai-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <div
+            id="aiMessages"
+            class="ai-messages"
+        >
+
+            <div class="ai-message bot">
+
+                <div class="message-avatar">
+                    🤖
+                </div>
+
+                <div class="message-bubble">
+
+                    <strong>
+                        ICT Lab AI
+                    </strong>
+
+                    <p>
+                        Hey! 👋 I'm your ICT assistant.
+                        Ask me anything about A/L ICT,
+                        programming, databases, networking,
+                        Boolean logic, computer systems,
+                        number systems or web development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="ai-suggestions">
+
+            <button data-ai-question="Explain the OSI model">
+                OSI Model
+            </button>
+
+            <button data-ai-question="Teach me database normalization">
+                Normalization
+            </button>
+
+            <button data-ai-question="Explain Karnaugh maps">
+                K-Maps
+            </button>
+
+        </div>
+
+
+
+        <div class="ai-input-area">
+
+            <textarea
+                id="aiInput"
+                rows="1"
+                placeholder="Ask an ICT question..."
+            ></textarea>
+
+
+            <button
+                id="sendAiMessage"
+                class="ai-send"
+            >
+                ➤
+            </button>
+
+        </div>
+
+
+        <div class="ai-footer">
+            ICT Lab AI • Answers can contain mistakes, so verify important work.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+  <script src="quizQuestions.js"></script>
+<script src="Main_JS.js"></script>
+<script src="chatbot.js"></script>
+  <script>
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("loader");
+
+    loader.classList.add("hide");
+
+});
+</script>
+</body>
+</html>
